@@ -17,8 +17,8 @@
 ### Constructor Functions
 **Traditional Syntax**
 
-Constructors define object properties and behaviours within the function definition. They do not return a value, instead when they are called they attach their function definition (the object and its key value pairs including methods) to the new variable name, creating a new object. The function can be called anytime to create a new object. 
-One powerful characteristic of creating functions via a constructor is that the 'new' function inherits object properties that allow the keyword 'this' to be scoped to the function as an object, rather than 'this' meaning the global Object as a normal function definition or expression would behave.  
+Constructors define object properties and behaviours within the function definition. They do not return a value, instead when they are called they attach their function definition (the object and its key value pairs including methods) to the new variable name, creating a new object. The function can be called anytime to create a new instance of the object. 
+One powerful characteristic of creating functions via a constructor is that the 'new' function inherits object characteristics that allow the keyword 'this' to be scoped to the function as an object, rather than 'this' meaning the global Object as a normal function definition or expression would behave.  
 
 **Code snippet example to be added here**
 
