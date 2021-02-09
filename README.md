@@ -43,6 +43,9 @@ Constructors can be designed to take parameters which allow property values to b
 
 Below is an example of an IIFE in the form of an anonymous function.  The parentheses at the end of the code calls the function immediately.  Notice that there is an extra set of parentheses wrapping the declaration.  This is because when annonymous, the word function canot be the first characters in the statement.  The second bracket can either be placed just before or after the parentheses that invoke the function:  
 
+![Screenshot from 2021-02-09 09-38-02](https://user-images.githubusercontent.com/73107656/107344705-a8008600-6aba-11eb-96f8-e5964741cd47.png)
+
+
 **Code snippet example to be added here**
 
 ### Modules
