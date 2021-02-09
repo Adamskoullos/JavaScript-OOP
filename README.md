@@ -11,7 +11,7 @@
 5. **Closures**
 6. **IIFE - Immediately Invoked Function Expression**
 7. **Namespace Pattern**
-7. **Modules**
+7. **Module Pattern**
 
 ----------------------------------------------------------------------
 
@@ -65,6 +65,6 @@ COUNTER can call the getCount function which has access to the 'log' function an
 ![Screenshot from 2021-02-09 13-54-36](https://user-images.githubusercontent.com/73107656/107373405-67b2ff00-6ade-11eb-835e-8a1974f2658c.png)
 
 
-### Modules
+### Module Pattern
 
 
