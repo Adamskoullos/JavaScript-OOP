@@ -27,3 +27,4 @@ let multiply = function (num){
         log(); 
     });
 })();  
+

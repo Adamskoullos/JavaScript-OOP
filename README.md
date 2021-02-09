@@ -10,6 +10,7 @@
 4. **Mixins**
 5. **Closures**
 6. **IIFE - Immediately Invoked Function Expression**
+7. **Namespace Pattern**
 7. **Modules**
 
 ----------------------------------------------------------------------
@@ -41,12 +42,18 @@ Constructors can be designed to take parameters which allow property values to b
 
 ### IIFE - Immediately Invoked Function Expression
 
-Below is an example of an IIFE in the form of an anonymous function.  The parentheses at the end of the code calls the function immediately.  Notice that there is an extra set of parentheses wrapping the declaration.  This is because when annonymous, the word function canot be the first characters in the statement.  The second bracket can either be placed just before or after the parentheses that invoke the function:  
+Below is an example of an IIFE in the form of an anonymous function.  The parentheses at the end of the code calls the function immediately.  Notice that there is an extra set of parentheses wrapping the declaration.  This is because when annonymous, the word function cannot be the first characters in the statement.  The second bracket can either be placed just before or after the parentheses that invoke the function:  
 
-![Screenshot from 2021-02-09 09-38-02](https://user-images.githubusercontent.com/73107656/107344705-a8008600-6aba-11eb-96f8-e5964741cd47.png)
+![Screenshot from 2021-02-09 13-48-17](https://user-images.githubusercontent.com/73107656/107372808-b9a75500-6add-11eb-8cfa-23daf33632b9.png)
 
 
 **Code snippet example to be added here**
+
+### Namespace Pattern
+
+
+![Screenshot from 2021-02-09 13-49-26](https://user-images.githubusercontent.com/73107656/107372873-cdeb5200-6add-11eb-85ef-fabc3366daf6.png)
+
 
 ### Modules
 
