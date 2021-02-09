@@ -27,3 +27,24 @@ Constructors can be designed to take parameters which allow property values to b
 **Code snippet example to be added here**
 
 
+### The prototype chain
+
+
+### Prototype Inheritance
+
+
+### Mixins
+
+
+### Closures
+
+
+### IIFE - Immediately Invoked Function Expression
+
+Below is an example of an IIFE in the form of an anonymous function.  The parentheses at the end of the code calls the function immediately.  Notice that there is an extra set of parentheses wrapping the declaration.  This is because when annonymous, the word function canot be the first characters in the statement.  The second bracket can either be placed just before or after the parentheses that invoke the function:  
+
+**Code snippet example to be added here**
+
+### Modules
+
+
