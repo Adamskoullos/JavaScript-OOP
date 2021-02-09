@@ -59,7 +59,7 @@ Then define all private variables and methods and then the public variables and 
 At the end input the namespace object as an argument.
 When the page loads, the function is invoked, the closure takes place and the public method is bound to the global object.
 
-COUNT can call the getCount function which has access to the 'log' function and 'count' variable via the closure:
+COUNTER can call the getCount function which has access to the 'log' function and 'count' variable via the closure:
 
 
 ![Screenshot from 2021-02-09 13-54-36](https://user-images.githubusercontent.com/73107656/107373405-67b2ff00-6ade-11eb-835e-8a1974f2658c.png)
