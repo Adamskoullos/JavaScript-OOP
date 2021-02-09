@@ -1,7 +1,7 @@
 # JavaScript OOP Reference Guide
 
 ### A resource for junior devs in their transition to mid level
-#### My study covers both the traditional syntax and the newer ES6 patterns. This is an ongoing guide that is a work in motion as I develop deeper levels of practical understanding.  Click the links below to go straight to the section of interest.  
+#### My study covers both the traditional syntax and the newer ES6 patterns. This is working document being crafted as I develop deeper levels of practical understanding.  Click the links below to go straight to the section of interest.  
 
 #### ToC:
 1. **Constructor Functions**
@@ -17,8 +17,8 @@
 ### Constructor Functions
 **Traditional Syntax**
 
-Constructors define object properties and behaviours within the function definition. They do not return a value, instead when they are called they attach their function definition (the object and its key value pairs including methods) to the new variable name, creating a new object. The function can be called anytime to create a new instance of the object. 
-One powerful characteristic of creating functions via a constructor is that the 'new' function inherits object characteristics that allow the keyword 'this' to be scoped to the function as an object, rather than 'this' meaning the global Object as a normal function definition or expression would behave.  
+Constructors are used to create new instances of an object/function. They do not return a value, instead when they are called they attach their function definition (the object and its key value pairs including methods) to the new variable name, creating a new object. The function can be called anytime to create a new instance of the object. 
+One powerful characteristic of creating functions via a constructor is that the 'new' function inherits object characteristics that allow the keyword 'this' to be scoped to the function as an object, rather than 'this' meaning the global Object as is the case with a normal function definition or expression.  
 
 **Code snippet example to be added here**
 
