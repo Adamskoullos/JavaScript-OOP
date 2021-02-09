@@ -3,7 +3,7 @@ const COUNTER = {};
 // write all code related to a group of functions and data and wrap it in an anonymous IIFE
 (function(namespace){
     // Private variables 
-    let count = 4 ;
+    let count = 0;
     let log = function(){
         console.log(count);
     };
@@ -22,7 +22,6 @@ const COUNTER = {};
 })(COUNTER);
 
 // namespace is used as the placeholder for when the public function is accessed:
-
-COUNTER.getCOUNT();
+COUNTER.getCount();
 
 

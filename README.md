@@ -52,7 +52,7 @@ Below is an example of an IIFE in the form of an anonymous function.  The parent
 ### Namespace Pattern
 
 
-![Screenshot from 2021-02-09 13-49-26](https://user-images.githubusercontent.com/73107656/107372873-cdeb5200-6add-11eb-85ef-fabc3366daf6.png)
+![Screenshot from 2021-02-09 13-54-36](https://user-images.githubusercontent.com/73107656/107373405-67b2ff00-6ade-11eb-835e-8a1974f2658c.png)
 
 
 ### Modules
