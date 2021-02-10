@@ -11,7 +11,7 @@
 5. **Closures**
 6. **IIFE - Immediately Invoked Function Expression**
 7. **Namespace Pattern**
-7. **Module Pattern**
+8. **Module Pattern**
 
 ----------------------------------------------------------------------
 

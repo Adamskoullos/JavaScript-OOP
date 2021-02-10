@@ -1,0 +1,19 @@
+{
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#174171",
+        "statusBar.noFolderBackground": "#212121",
+        "statusBar.debuggingBackground": "#2e2e2e"
+    },
+    "workbench.settings.openDefaultSettings": true,
+    "workbench.colorTheme": "Monokai",
+    "editor.fontSize": 16,
+    
+    "editor.fontWeight": "300",
+    "editor.tabSize": 2,
+    "editor.cursorBlinking": "smooth",
+    "terminal.integrated.fontSize": 16,
+    "debug.console.fontSize": 16,
+    "editor.minimap.enabled": false,
+    "explorer.openEditors.visible": 0,
+    "breadcrumbs.enabled": false,
+}
