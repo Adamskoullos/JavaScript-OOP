@@ -67,7 +67,7 @@ COUNTER can call the getCount function which has access to the 'log' function an
 
 ### Module Pattern
 
-The module pattern takes the namespace pattern to the next level.  With all the advantages of the namespace pattern the module pattern allows code to be organised, built up and broken down into interchangable blocks.  This makes it much easier to organise, maintain, reason about and test and also have multiple people working on the code base at the same time.
+The module pattern takes the namespace pattern to the next level.  With all the advantages of the namespace pattern the module pattern allows code to be organised, built up and broken down into interchangable blocks.  This makes it much easier to organise, maintain, reason about, test and also have multiple people working on the code base at the same time.
 
 Below is an example of the key parts to the module pattern structure and below that I break it down to detail each part with a fine tooth comb.  After I walk through how module files can be linked and utilised as one.
 
@@ -75,3 +75,20 @@ Below is an example of the key parts to the module pattern structure and below t
 
 
 ![Screenshot from 2021-02-10 06-46-25](https://user-images.githubusercontent.com/73107656/107475337-d9855a00-6b6b-11eb-9aac-db9aee2e5c62.png)
+
+
+Now lets say for example that COUNTER is one of only two or three global variables in the project and the app is some kind of counter tool.  There may be multiple modules each containing different blocks of functionality for the app.  For example, each module has its own file and the below files contain modules all within the same namespace:
+
+* counter1.js 
+* counter2.JS
+* counter3.js
+
+All the above files have modules that are assigned to the same variable 'COUNT'.  This works as the way the pattern is structured means that as each file is loaded the object 'COUNT' is passed in, added to and re-assigned to a new variable with the same name.  Here is the specific parts of the pattern that allow this to happen:
+
+![Screenshot from 2021-02-10 07-10-24](https://user-images.githubusercontent.com/73107656/107477137-23237400-6b6f-11eb-8594-845d85d15d8b.png)
+
+
+![Screenshot from 2021-02-10 07-10-38](https://user-images.githubusercontent.com/73107656/107477157-2c144580-6b6f-11eb-8d7b-6a9d5a88a837.png)
+
+
+1. The first file is loaded, the 
