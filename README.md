@@ -91,4 +91,13 @@ All the above files have modules that are assigned to the same variable 'COUNT'.
 ![Screenshot from 2021-02-10 07-10-38](https://user-images.githubusercontent.com/73107656/107477157-2c144580-6b6f-11eb-8d7b-6a9d5a88a837.png)
 
 
-1. The first file is loaded, the 
+1. The first file is loaded, a new global variable is declared and asssigned the return value of the IIFE.
+
+2. The IIFE is invoked sees that COUNTER is not defined so passes the empty object.
+
+3. The public data is attahcxed to the object and returned as the value of COUNT.
+
+4. The following pages are loaded each time passing the previous COUNT object adding to it and reassigning it with the same variable name.
+
+Next we will look at how each file is connected.
+
