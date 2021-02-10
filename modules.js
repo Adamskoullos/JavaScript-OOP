@@ -1,3 +1,31 @@
+let COUNTER = (function(namespace){
+    // Private------------------------------- 
+    let count = 0;
+    let log = function(){
+        console.log(count);
+    };
+    
+    btn = document.querySelector('#btn');
+    btn.addEventListener('click', function(){
+        count++;
+        log(); 
+    });
+    
+    let getCount = function (){
+        log();
+    };
+    // Public---------------------------------
+    namespace.getCount = getCount;
+    
+    return namespace;
+        
+})(COUNTER || {});
+
+
+COUNTER.getCount();
+
+
+//----------------------------------------------------------
 
 
 let COUNTER = (function(namespace){
@@ -37,29 +65,5 @@ COUNTER.getCount();
 
 
 
-let COUNTER = (function(namespace){
-    // Private------------------------------- 
-    let count = 0;
-    let log = function(){
-        console.log(count);
-    };
-    
-    btn = document.querySelector('#btn');
-    btn.addEventListener('click', function(){
-        count++;
-        log(); 
-    });
-    
-    let getCount = function (){
-        log();
-    };
-    // Public---------------------------------
-    namespace.getCount = getCount;
-    
-    return namespace;
-        
-})(COUNTER || {});
 
-
-COUNTER.getCount();
 

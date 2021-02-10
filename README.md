@@ -67,4 +67,11 @@ COUNTER can call the getCount function which has access to the 'log' function an
 
 ### Module Pattern
 
+The module pattern takes the namespace pattern to the next level.  With all the advantages of the namespace pattern the module pattern allows code to be organised, built up and broken down into interchangable blocks.  This makes it much easier to organise, maintain, reason about and test and also have multiple people working on the code base at the same time.
 
+Below is an example of the key parts to the module pattern structure and below that I break it down to detail each part with a fine tooth comb.  After I walk through how module files can be linked and utilised as one.
+
+![Screenshot from 2021-02-10 06-45-38](https://user-images.githubusercontent.com/73107656/107475306-cd999800-6b6b-11eb-8384-6b1ce767a18e.png)
+
+
+![Screenshot from 2021-02-10 06-46-25](https://user-images.githubusercontent.com/73107656/107475337-d9855a00-6b6b-11eb-9aac-db9aee2e5c62.png)
