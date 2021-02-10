@@ -4,7 +4,7 @@
 #### My study covers both the traditional syntax and the newer ES6 patterns. This is working document being crafted as I develop deeper levels of practical understanding.  Click the links below to go straight to the section of interest.  
 
 #### ToC:
-1. **Constructor Functions**
+1. **Classes, Constructor & Factory Functions**
 2. **The prototype chain**
 3. **Prototype Inheritance**
 4. **Mixins**
@@ -15,11 +15,16 @@
 
 ----------------------------------------------------------------------
 
-### Constructor Functions
-**Traditional Syntax**
+### Classes, Constructors & Factory Functions
 
-Constructors are used to create new instances of an object/function. They do not return a value, instead when they are called they attach their function definition (the object and its key value pairs including methods) to the new variable name, creating a new object. The function can be called anytime to create a new instance of the object. 
-One powerful characteristic of creating functions via a constructor is that the 'new' function inherits object characteristics that allow the keyword 'this' to be scoped to the function as an object, rather than 'this' meaning the global Object as is the case with a normal function definition or expression.  
+Factory functions return an object without using the 'new' keyword, they also do not use the 'this' keyword. Factory functions can add any properties and behaviours before the return statement and these will be included in the closure when the object is returned and assigned to the new variable name.
+Factory functions are the most explicit way of creating new objects.
+
+Both classes and constructor functions use the 'new' and 'this' keywords in their construction.
+Adding prototypes to classes is quick and easy and clean, all the code is contained within the class scope.
+
+Below is an example of the code pattern to set classes, constructors and factory functions up:
+ 
 
 **Code snippet example to be added here**
 
@@ -67,9 +72,11 @@ COUNTER can call the getCount function which has access to the 'log' function an
 
 ### Module Pattern
 
+Firstly we will look at the traditional pattern, breaking the pattern down into its nuts and bolts and then we will move on to model the ES6 native module structure.
+
 The module pattern takes the namespace pattern to the next level.  With all the advantages of the namespace pattern the module pattern allows code to be organised, built up and broken down into interchangable blocks.  This makes it much easier to organise, maintain, reason about, test and also have multiple people working on the code base at the same time.
 
-Below is an example of the key parts to the module pattern structure and below that I break it down to detail each part with a fine tooth comb.  After that I walk through how module files can be linked and utilised as one.
+Below is an example of the key parts to the module pattern structure and below that I break it down to detail each part with a fine tooth comb.  We leave the traditional pattern at that point and switch over to focus on the ES6 model.
 
 ![Screenshot from 2021-02-10 06-45-38](https://user-images.githubusercontent.com/73107656/107475306-cd999800-6b6b-11eb-8384-6b1ce767a18e.png)
 
@@ -100,12 +107,8 @@ All the above files have modules that are assigned to the same variable 'COUNT'.
 4. The following pages are loaded each time passing the previous COUNT object in, adding to it and then re-assigning it with the same variable name.
 
 Once all files are loaded, the object 'COUNT' includes all the public properties from all files and in its closure all private data. 
-Next we will look at how each file is connected.
 
-Every js file is linked within the HTML file and the order is critical.  Some files will include functions that are defined in other files so the order required is specific to each particular application.
-
-We now have multiple files of modules and all the files are linked to the main js file, however each individual module still cannot access other files functions.
-Linking functions between files, so each file has access to functions they are utilising.  This is something that for efficiency should be planned for in the design phase and added as each file is being built out. Now we have got our heads around the previous aspects of modules its now time add this extra level of complexity back in and present the pattern structure to do this.
+Lets now see how the ES6 nativce module pattern is structured and complete the model by linking modules through import and export patterns. 
 
 
 
