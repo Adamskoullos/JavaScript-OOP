@@ -1,7 +1,7 @@
 # JavaScript OOP Reference Guide
 
 ### A resource for junior devs in their transition to mid level
-#### My study covers both the traditional syntax and the newer ES6 patterns. This is working document being crafted as I develop deeper levels of practical understanding.  Click the links below to go straight to the section of interest.  
+#### My study covers both the traditional syntax and the newer ES6 patterns. This is a working document being crafted as I develop deeper levels of practical understanding.  Click the links below to go straight to the section of interest.  
 
 #### ToC:
 1. **Classes, Constructor & Factory Functions**
