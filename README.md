@@ -68,13 +68,14 @@ Below is an example of an IIFE in the form of an anonymous function.  The parent
 
 ### Namespace Pattern
 
-The below example shows how to structure and create a namespace object using an IIFE in a way that takes advantage of closure while also specifying specific public variables and methods.
+The below example shows how to structure and create a namespace object using an IIFE in a way that takes advantage of closure: 
 
-First a global object is initialised using the capital letter convention.  This is the key to access any public variables or methods later on.
-Next define the IIFE giving it a parameter input.  The argument for this will be the global object.
-Then define all private variables and methods and then the public variables and methods.  Notice how the public method is prefixed with the 'namespace' parameter, this is how the method will be accessible later.
-At the end input the namespace object as an argument.
-When the page loads, the function is invoked, the closure takes place and the public method is bound to the global object.
+First a global variable is initialised using the capital letter convention.  This is the key to access any public variables or methods that are returned.
+Next define the IIFE passing it an existing variable with the same name used or if it does not already exist, an empty object.
+
+Then define all private variables and methods and then the public methods.  Notice how the public method is made public by referencing it with the passed in public variable, which becomes accessible when the public variable/object is returned.
+
+When the page loads, the function is invoked, the closure takes place and the method 'getCount' is made public by being attached to the variable/object passed in which is then returned to the global variable 'COUNTER'. 
 
 COUNTER can call the getCount function which has access to the 'log' function and 'count' variable via the closure:
 
