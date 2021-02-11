@@ -54,7 +54,7 @@ The below example shows the class pattern structure including a method which is 
 
 
 ### Closures
-
+-------------------------------------------------------------------
 
 ### IIFE - Immediately Invoked Function Expression
 
@@ -64,6 +64,7 @@ Below is an example of an IIFE in the form of an anonymous function.  The parent
 
 
 **Code snippet example to be added here**
+------------------------------------------------------------------
 
 ### Namespace Pattern
 
@@ -82,7 +83,7 @@ The first example is a zoomed out view of the whole:
 
 Then I break the pattern down to detail each key part:
 ![Screenshot from 2021-02-11 11-24-51](https://user-images.githubusercontent.com/73107656/107630673-c5b92100-6c5b-11eb-9876-809706d0ec8b.png)
-
+------------------------------------------------------------------
 
 ### Module Pattern
 
