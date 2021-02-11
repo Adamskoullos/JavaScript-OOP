@@ -17,20 +17,30 @@
 
 ### Classes, Constructors & Factory Functions
 
-Factory functions return an object without using the 'new' keyword, they also do not use the 'this' keyword. Factory functions can add any properties and behaviours before the return statement and these will be included in the closure when the object is returned and assigned to the new variable name.
-Factory functions are the most explicit way of creating new objects.
+**Factory functions** return an object without using the 'new' keyword, they also do not use the 'this' keyword. Factory functions can add any properties and behaviours before the return statement and these will be included in the closure when the object is returned and assigned to the new variable name.
+Factory functions are the most explicit way of creating new objects, they are great but we now have constructors.
 
-Both classes and constructor functions use the 'new' and 'this' keywords in their construction.
-Adding prototypes to classes is quick and easy and clean, all the code is contained within the class scope.
+**constructor functions** use the 'new' and 'this' keywords in their pattern, below is an example of the constructor function pattern using parameters which allow values to be dynamically added as each new instance is created:
 
-Below is an example of the code pattern to set classes, constructors and factory functions up:
+**Code snippet example to be added here**
+
+Adding prototypes to constructors can be done with the following pattern:
+
+**Code snippet example to be added here**
+
+Note: the assignment of the constructor to itself.  This ensures each new instance is also assigned to this constructor.
+
+As a rule of thumb properties are saved to the constructor which in turn becomes the own property of each new instance. Methods are saved as prototypes on the constructor.  This assumes that property values are largely specific to each new instance and method functionality is largely shared.  This allows the methods to be saved once and accessed by each new instance and also any changes are only made to the constructors prototype and not to each instance.
+
+
+**Classes** abstract the act of adding prototypes and allow all the code relating to properties and behaviour to be encapsulated within the class scope. Adding prototypes to classes is quick and clean and also easy to reason about when approaching unfamiliar code. 
+
+
  
 
 **Code snippet example to be added here**
 
-Constructors can be designed to take parameters which allow property values to be dynamic.  In this case any new object values are not set until the constructor function is called with the specific arguments for the new object:
 
-**Code snippet example to be added here**
 
 
 ### The prototype chain
