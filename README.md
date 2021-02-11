@@ -77,8 +77,11 @@ When the page loads, the function is invoked, the closure takes place and the pu
 
 COUNTER can call the getCount function which has access to the 'log' function and 'count' variable via the closure:
 
+The first example is a zoomed out view of the whole:
+![Screenshot from 2021-02-11 11-22-44](https://user-images.githubusercontent.com/73107656/107630590-a15d4480-6c5b-11eb-8269-6c65b7c00160.png)
 
-![Screenshot from 2021-02-09 13-54-36](https://user-images.githubusercontent.com/73107656/107373405-67b2ff00-6ade-11eb-835e-8a1974f2658c.png)
+Then I break the pattern down to detail each key part:
+![Screenshot from 2021-02-11 11-24-51](https://user-images.githubusercontent.com/73107656/107630673-c5b92100-6c5b-11eb-9876-809706d0ec8b.png)
 
 
 ### Module Pattern
