@@ -6,7 +6,7 @@
     },
     "workbench.settings.openDefaultSettings": true,
     "workbench.colorTheme": "Monokai",
-    "editor.fontSize": 16,
+    "editor.fontSize": 14,
     
     "editor.fontWeight": "300",
     "editor.tabSize": 2,

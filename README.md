@@ -89,7 +89,7 @@ Then I break the pattern down to detail each key part:
 ------------------------------------------------------------------
 
 ### Module Pattern
-
+**To be re-written**
 Firstly we will look at the traditional pattern, breaking the pattern down into its nuts and bolts and then we will move on to model the ES6 native module structure.
 
 The module pattern takes the namespace pattern to the next level.  With all the advantages of the namespace pattern the module pattern allows code to be organised, built up and broken down into interchangable blocks.  This makes it much easier to organise, maintain, reason about, test and also have multiple people working on the code base at the same time.
