@@ -4,18 +4,19 @@
 #### My study covers both the traditional syntax and the newer ES6 patterns. This is a working document being crafted as I develop deeper levels of practical understanding.  Click the links below to go straight to the section of interest.  
 
 #### ToC:
-1. **Classes, Constructor & Factory Functions**
-2. **The prototype chain**
-3. **Prototype Inheritance**
-4. **Mixins**
-5. **Closures**
-6. **IIFE - Immediately Invoked Function Expression**
-7. **Namespace Pattern**
-8. **Module Pattern**
+[Constructors & Factory Functions](###Constructors-&-Factory-Functions)<br>
+[Prototype Inheritance](###Prototype-Inheritance)<br>
+[Classes](###Classes)<br>
+[The prototype chain](###The-prototype-chain)<br>
+[Mixins](###Mixins)<br>
+[Closures](###Classes)<br>
+[IIFE - Immediately Invoked Function Expression](###IIFE---Immediately-Invoked-Function-Expression)<br>
+[Namespace Pattern](###Namespace-Pattern) <br>
+[ES6 native module pattern](###ES6-native-module-pattern)
 
 ----------------------------------------------------------------------
 
-### Classes, Constructors & Factory Functions
+### Constructors & Factory Functions
 
 **Factory functions** return an object without using the 'new' keyword, they also do not use the 'this' keyword. Factory functions can add any private properties and behaviours before the return statement to be included in the closure when the object is returned and assigned to the new variable name.
 Factory functions are the most explicit way of creating new objects, they are great however we now have constructors.
@@ -79,6 +80,8 @@ Now Motorbike has inherited both the prototype properties of Vehicle and also th
 
 ------------------------------------------------------------
 
+### Classes
+
 **Classes** abstract the act of adding prototypes and allow all the code relating to properties and behaviour to be encapsulated within the class scope. Adding prototypes to classes is quick and clean and also easier to reason about when approaching unfamiliar code. 
 The below example shows the class pattern structure in the form of a declaration.  Notice the constructor function within and below that the prototype methods:
 
@@ -105,6 +108,7 @@ class Vehicle {
 
 Classes can be structured in different ways and deserve a lot more time than what has been spent here. Visit the [classes page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) on the MDN mozilla site to learn much more. 
 
+----------------------------------------------------------------------------------------------------------
 
 ### The prototype chain
 I think here a picture says a thousands words so here is an image from the console displaying the prototype chain for our example sportsCoupe:
@@ -113,9 +117,16 @@ I think here a picture says a thousands words so here is an image from the conso
 
 Here we can see that sportsCoupe has access to the **salePrice** method which is a prototype of the Car class, digging a level deeper we can see that sportsCoupe also has access to the prototype methods on the Vehicle class **forwards** and **stop**.  Digging deeper down again the global Object prototypes are also accessible to sportsCoupe as they are to all objects. This is an example of the prototype chain.
 
+--------------------------------------------------------------------------------------------------
 
 ### Mixins
 
+When reusable functions are not inherited from a class they can be saved and used from mixins.
+Mixins are a way to store a function constructor where the function definition will be reused across objects of different types/classes.  For example both cars and trains move but these two types of objects will not share the same prototypes...however they could both share the behaviour of move functions.  In this circumstance a mixin is created which can then add the function to which ever object is passed into the mixin as an argument:
+
+![Screenshot from 2021-02-16 14-11-13](https://user-images.githubusercontent.com/73107656/108074236-e240c900-7060-11eb-9a7a-bfa69a055fec.png)
+
+-------------------------------------------------------------------------------------------
 
 ### Closures
 -------------------------------------------------------------------
@@ -150,6 +161,7 @@ The first example is a zoomed out view of the whole:
 Then I break the pattern down to detail each key part:
 
 ![Screenshot from 2021-02-11 11-24-51](https://user-images.githubusercontent.com/73107656/107630673-c5b92100-6c5b-11eb-9876-809706d0ec8b.png)
+
 ------------------------------------------------------------------
 
 ### ES6 native module pattern
