@@ -4,7 +4,7 @@
 #### My study covers both the traditional syntax and the newer ES6 patterns. This is a working document being crafted as I develop deeper levels of practical understanding.  Click the links below to go straight to the section of interest.  
 
 #### ToC:
-[Constructors & Factory Functions](#Constructors-and-Factory-Functions)<br>
+[Constructors and Factory Functions](#Constructors-and-Factory-Functions)<br>
 [Prototype Inheritance](#Prototype-Inheritance)<br>
 [Classes](#Classes)<br>
 [The prototype chain](#The-prototype-chain)<br>
@@ -129,6 +129,16 @@ Mixins are a way to store a function constructor where the function definition w
 -------------------------------------------------------------------------------------------
 
 ## Closures
+
+A closure is an event that takes place that stores private data in persistent memory for access only to relevant functions.  Lets look at a simple code snippet to detail this event:
+
+![Screenshot from 2021-02-16 15-02-12](https://user-images.githubusercontent.com/73107656/108080644-0358e800-7068-11eb-94ec-5583c9740276.png)
+As the new const GT86 is declared and assigned the return value of Car() which is invoked, a new instance of Car is created and saved to GT86.  During this event the function scope of the constructor Car, also the closure scope closes over and all data within this scope that is used by the public functions is saved to the closure memory.   
+
+The example shows that speed is saved as private and is not able to be accessed shown by the undefined in the console.  However the speed functions do have access to this private data shown by the current speed log showing 2.
+
+Using closure allows data to be kept out of the global namespace and reduces the risk of side effects by external code. 
+
 -------------------------------------------------------------------
 
 ### IIFE - Immediately Invoked Function Expression
