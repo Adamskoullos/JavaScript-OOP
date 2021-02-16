@@ -4,7 +4,7 @@
 #### My study covers both the traditional syntax and the newer ES6 patterns. This is a working document being crafted as I develop deeper levels of practical understanding.  Click the links below to go straight to the section of interest.  
 
 #### ToC:
-[Constructors & Factory Functions](#Constructors-&-Factory-Functions)<br>
+[Constructors & Factory Functions](#Constructors-and-Factory-Functions)<br>
 [Prototype Inheritance](#Prototype-Inheritance)<br>
 [Classes](#Classes)<br>
 [The prototype chain](#The-prototype-chain)<br>
@@ -16,7 +16,7 @@
 
 ----------------------------------------------------------------------
 
-### Constructors & Factory Functions
+## Constructors and Factory Functions
 
 **Factory functions** return an object without using the 'new' keyword, they also do not use the 'this' keyword. Factory functions can add any private properties and behaviours before the return statement to be included in the closure when the object is returned and assigned to the new variable name.
 Factory functions are the most explicit way of creating new objects, they are great however we now have constructors.
@@ -67,7 +67,7 @@ As a rule of thumb properties are saved to the constructor which in turn becomes
 
 ------------------------------------------------------------
 
-### Prototype Inheritance
+## Prototype Inheritance
 
 Lets say there is a more general constructor called Vehicle and we have created a new constructor for a type of vehicle called Motorbike and we want Motorbike to inherit Vehicles prototypes. Here is the pattern:
 
@@ -80,7 +80,7 @@ Now Motorbike has inherited both the prototype properties of Vehicle and also th
 
 ------------------------------------------------------------
 
-### Classes
+## Classes
 
 **Classes** abstract the act of adding prototypes and allow all the code relating to properties and behaviour to be encapsulated within the class scope. Adding prototypes to classes is quick and clean and also easier to reason about when approaching unfamiliar code. 
 The below example shows the class pattern structure in the form of a declaration.  Notice the constructor function within and below that the prototype methods:
@@ -110,7 +110,7 @@ Classes can be structured in different ways and deserve a lot more time than wha
 
 ----------------------------------------------------------------------------------------------------------
 
-### The prototype chain
+## The prototype chain
 I think here a picture says a thousands words so here is an image from the console displaying the prototype chain for our example sportsCoupe:
 
 ![Screenshot from 2021-02-16 09-37-46](https://user-images.githubusercontent.com/73107656/108045019-e0640f00-703a-11eb-98c5-7ca902df0a68.png)
@@ -128,7 +128,7 @@ Mixins are a way to store a function constructor where the function definition w
 
 -------------------------------------------------------------------------------------------
 
-### Closures
+## Closures
 -------------------------------------------------------------------
 
 ### IIFE - Immediately Invoked Function Expression
@@ -164,7 +164,7 @@ Then I break the pattern down to detail each key part:
 
 ------------------------------------------------------------------
 
-### ES6 native module pattern
+## ES6 native module pattern
 
 JavaScript modules despite still evolving have become far more sophisticated and modular since ES6.  By simply adding the type **module** to a JavaScript file withing the script tag the whole file becomes automatically private as if one big closure has taken place.  To make specific functions and data available within the app to be shared between files/modules they are first explicitly exported and then imported. There are a variety of ways this can be structured, we will look at two:
 
