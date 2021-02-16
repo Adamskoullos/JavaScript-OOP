@@ -9,7 +9,7 @@
 [Classes](###Classes)<br>
 [The prototype chain](###The-prototype-chain)<br>
 [Mixins](###Mixins)<br>
-[Closures](###Classes)<br>
+[Closures](###Closures)<br>
 [IIFE - Immediately Invoked Function Expression](###IIFE---Immediately-Invoked-Function-Expression)<br>
 [Namespace Pattern](###Namespace-Pattern) <br>
 [ES6 native module pattern](###ES6-native-module-pattern)
