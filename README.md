@@ -126,11 +126,11 @@ Below is an example of an IIFE in the form of an anonymous function.  The parent
 
 ![Screenshot from 2021-02-09 13-48-17](https://user-images.githubusercontent.com/73107656/107372808-b9a75500-6add-11eb-8cfa-23daf33632b9.png)
 
-
-**Code snippet example to be added here**
 ------------------------------------------------------------------
 
-### Namespace Pattern
+### Namespace Pattern 
+
+#### This sections covers one of many variations of the traditional module pattern.  We now have the modern ES6 native modules but before we get to them I wanted to cover the namespace pattern as it includes so many powerful moving parts into a beautiful construction.  
 
 The below example shows how to structure and create a namespace object using an IIFE in a way that takes advantage of closure: 
 
@@ -152,47 +152,51 @@ Then I break the pattern down to detail each key part:
 ![Screenshot from 2021-02-11 11-24-51](https://user-images.githubusercontent.com/73107656/107630673-c5b92100-6c5b-11eb-9876-809706d0ec8b.png)
 ------------------------------------------------------------------
 
-### Module Pattern
-**To be re-written**
-Firstly we will look at the traditional pattern, breaking the pattern down into its nuts and bolts and then we will move on to model the ES6 native module structure.
+### ES6 native module pattern
 
-The module pattern takes the namespace pattern to the next level.  With all the advantages of the namespace pattern the module pattern allows code to be organised, built up and broken down into interchangable blocks.  This makes it much easier to organise, maintain, reason about, test and also have multiple people working on the code base at the same time.
+JavaScript modules despite still evolving have become far more sophisticated and modular since ES6.  By simply adding the type **module** to a JavaScript file withing the script tag the whole file becomes automatically private as if one big closure has taken place.  To make specific functions and data available within the app to be shared between files/modules they are first explicitly exported and then imported. There are a variety of ways this can be structured, we will look at two:
 
-Below is an example of the key parts to the module pattern structure and below that I break it down to detail each part with a fine tooth comb.  We leave the traditional pattern at that point and switch over to focus on the ES6 model.
+`<script type="module" src="main.js"></script>`
 
-![Screenshot from 2021-02-10 06-45-38](https://user-images.githubusercontent.com/73107656/107475306-cd999800-6b6b-11eb-8384-6b1ce767a18e.png)
+Inline
 
+```
+// export from somefile.js
+export const myFunc = function (){};
 
-![Screenshot from 2021-02-10 06-46-25](https://user-images.githubusercontent.com/73107656/107475337-d9855a00-6b6b-11eb-9aac-db9aee2e5c62.png)
+// import to main.js
+import {myFunc} from './modules/somefile.js';
 
+```
 
-Now lets say for example that COUNTER is one of only two or three global variables in the project and the app is some kind of counter tool.  There may be multiple modules within the same namespace each containing different blocks of functionality for the app.  For example, each module has its own file and the below files contain modules all within the same namespace:
+Grouped (kind of looks like destructuring)
 
-* counter1.js 
-* counter2.JS
-* counter3.js
+```
+export { func1, func2, func3 };
 
-All the above files have modules that are assigned to the same variable 'COUNT'.  This works as the way the pattern is structured means that as each file is loaded the object 'COUNT' is passed in, added to and then re-assigned to a new variable with the same name.  Here is the specific parts of the pattern that allow this to happen:
+import { func1, func2, func3 } from './modules/somefile.js';
 
-![Screenshot from 2021-02-10 07-10-24](https://user-images.githubusercontent.com/73107656/107477137-23237400-6b6f-11eb-8594-845d85d15d8b.png)
+```
 
+Default export:
 
-![Screenshot from 2021-02-10 07-10-38](https://user-images.githubusercontent.com/73107656/107477157-2c144580-6b6f-11eb-8d7b-6a9d5a88a837.png)
+```
+export default myFunc;
 
+```
 
-1. The first file is loaded, a new global variable is declared and asssigned the return value of the IIFE.
+Creating a module object so a files exports are properties of the object.  In this case the only global variable will be the object name.  This harks back to the traditional module namespace management and builds on it brilliantly.  Here is this pattern:
 
-2. The IIFE is invoked sees that COUNTER is not defined so passes the empty object.
+```
+export { func1, func2, func3 };
 
-3. The public data is attached to the object and returned as the value of COUNT.
+import * as objectName from './modules/somefile.js';
 
-4. The following pages are loaded each time passing the previous COUNT object in, adding to it and then re-assigning it with the same variable name.
+```
 
-Once all files are loaded, the object 'COUNT' includes all the public properties from all files and in its closure all private data. 
+In this situation the individual methods are accessed as normal:
 
-Lets now see how the ES6 nativce module pattern is structured and complete the model by linking modules through import and export patterns. 
+```
+objectName.func1();
 
-
-
-
-
+```
