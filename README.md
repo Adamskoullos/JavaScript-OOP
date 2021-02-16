@@ -18,30 +18,78 @@
 ### Classes, Constructors & Factory Functions
 
 **Factory functions** return an object without using the 'new' keyword, they also do not use the 'this' keyword. Factory functions can add any private properties and behaviours before the return statement to be included in the closure when the object is returned and assigned to the new variable name.
-Factory functions are the most explicit way of creating new objects, they are great but we now have constructors.
+Factory functions are the most explicit way of creating new objects, they are great however we now have constructors.
 
+**Constructor functions** use the 'new' and 'this' keywords in their pattern, below is an example of the constructor function pattern using parameters which allow values to be dynamically added as each new instance is created.  They do not return a value, they return a new object:
 
-**Constructor functions** use the 'new' and 'this' keywords in their pattern, below is an example of the constructor function pattern using parameters which allow values to be dynamically added as each new instance is created:
+```
+function Car(make, model, price){
+  this.make = make;
+  this.model = model;
+  this.price = price;
+} 
 
-**Code snippet example to be added here-----------**
+let sportsCoupe = new Car('Toyota', 'Supra', 60000);
+```
 
 Adding prototypes to constructors can be done with the following pattern:
 
-**Code snippet example to be added here-----------**
+```
+Car.prototype.salePrice = function (){
+  return this.price * 0.90;
+};
 
-Note: the assignment of the constructor to itself.  This ensures each new instance is also assigned to this constructor.
+sportsCoupe.salePrice(); // 54000
+```
+The example above shows how objects created from the constructor inherit the prototypes of the constructor.  Side note, this object also inherits any further prototypes up the chain with the global Object.prototype methods being at the top. More on this later. 
+
+The advantage of adding prototypes to constructors is that they only need to be added and changed in one place making data storage and maintaining the code base more efficient.  
+
+The method `sportsCoupe.hasOwnProperty(price);` can be used to check if a property exists on an object.  This will return false if the property is a prototype of the object.
+
+We can also check an objects constructor, however unless a constructor has explicitly been assign itself as its constructor each new object would have the default constructor of the global Object.  Here is the pattern to use when assigning prototypes to the constructor to ensure each new object is assigned its immediate parent as its constructor:
+
+```
+Car.prototype = {
+  constructor: Car, // This is the bit to remember
+  salePrice: function (){ 
+  return this.price * 0.90;
+};
+}
+
+
+Car.prototype.isPrototypeOf(sportsCoupe);
+// This would now result in true
+```
 
 As a rule of thumb properties are saved to the constructor which in turn becomes the own property of each new instance. Methods are saved as prototypes on the constructor.  This assumes that property values are largely specific to each new instance and method functionality is largely shared.  This allows the methods to be saved once and accessed by each new instance and also any changes are only made to the constructors prototype and not to each instance.
 
 
 **Classes** abstract the act of adding prototypes and allow all the code relating to properties and behaviour to be encapsulated within the class scope. Adding prototypes to classes is quick and clean and also easier to reason about when approaching unfamiliar code. 
-The below example shows the class pattern structure including a method which is being added as a prototype of the class:  
+The below example shows the class pattern structure in the form of a declaration.  Notice the constructor function within and below that the prototype methods:
 
-**Code snippet example to be added here-----------**
+```
+class Vehicle {
+  constructor(){
+    this.type = type;
+    this.wheels = wheels;
+    this.fuel = fuel;
+  }
+  forwards(){
+    return 'moving forwards';
+  }
+  stop(){
+    return 'stopped';
+  }
+}
 
-**Class Inheritance** is when an existing class is used as the basis to create a new class. The new class inherits the existing classes own and prototype properties and can also add it's own:   
+```
 
-**Code snippet example to be added here-----------**
+**Class Inheritance** is when an existing class is used as the basis to create a new class. The new class inherits the existing classes own and prototype properties and can also add it's own.  We could instead of using the constructor to make a Car as in an earlier section, create a Car class be using class inheritance:
+
+![Screenshot from 2021-02-16 09-25-51](https://user-images.githubusercontent.com/73107656/108043679-4b144b00-7039-11eb-8563-f93c4a7d5994.png)
+
+Classes can be structured in different ways and deserve a lot more time than what has been spent here. Visit the [classes page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) on the MDN mozilla site to learn much more. 
 
 
 ### The prototype chain
