@@ -4,7 +4,7 @@
 #### My study covers both the traditional syntax and the newer ES6 patterns. This is a working document being crafted as I develop deeper levels of practical understanding.  Click the links below to go straight to the section of interest.  
 
 #### ToC:
-[Constructors & Factory Functions](###Constructors-&-Factory-Functions)<br>
+[Constructors & Factory Functions](#Constructors-&-Factory-Functions)<br>
 [Prototype Inheritance](###Prototype-Inheritance)<br>
 [Classes](###Classes)<br>
 [The prototype chain](###The-prototype-chain)<br>
