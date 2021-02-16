@@ -64,6 +64,20 @@ Car.prototype.isPrototypeOf(sportsCoupe);
 
 As a rule of thumb properties are saved to the constructor which in turn becomes the own property of each new instance. Methods are saved as prototypes on the constructor.  This assumes that property values are largely specific to each new instance and method functionality is largely shared.  This allows the methods to be saved once and accessed by each new instance and also any changes are only made to the constructors prototype and not to each instance.
 
+------------------------------------------------------------
+
+### Prototype Inheritance
+
+Lets say there is a more general constructor called Vehicle and we have created a new constructor for a type of vehicle called Motorbike and we want Motorbike to inherit Vehicles prototypes. Here is the pattern:
+
+```
+Motorbike.prototype = Object.create(Vehicle.prototype);
+Motorbike.prototype.constructor = Motorbike;
+
+```
+Now Motorbike has inherited both the prototype properties of Vehicle and also the default Object.  It can also assign it's own prototype properties.
+
+------------------------------------------------------------
 
 **Classes** abstract the act of adding prototypes and allow all the code relating to properties and behaviour to be encapsulated within the class scope. Adding prototypes to classes is quick and clean and also easier to reason about when approaching unfamiliar code. 
 The below example shows the class pattern structure in the form of a declaration.  Notice the constructor function within and below that the prototype methods:
@@ -93,13 +107,11 @@ Classes can be structured in different ways and deserve a lot more time than wha
 
 
 ### The prototype chain
-I think here a picture says a thousands words so here is an image from the console displaying the prototype chain for our example sportCoupe:
+I think here a picture says a thousands words so here is an image from the console displaying the prototype chain for our example sportsCoupe:
 
 ![Screenshot from 2021-02-16 09-37-46](https://user-images.githubusercontent.com/73107656/108045019-e0640f00-703a-11eb-98c5-7ca902df0a68.png)
 
 Here we can see that sportsCoupe has access to the **salePrice** method which is a prototype of the Car class, digging a level deeper we can see that sportsCoupe also has access to the prototype methods on the Vehicle class **forwards** and **stop**.  Digging deeper down again the global Object prototypes are also accessible to sportsCoupe as they are to all objects. This is an example of the prototype chain.
-
-### Prototype Inheritance
 
 
 ### Mixins
