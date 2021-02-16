@@ -93,7 +93,11 @@ Classes can be structured in different ways and deserve a lot more time than wha
 
 
 ### The prototype chain
+I think here a picture says a thousands words so here is an image from the console displaying the prototype chain for our example sportCoupe:
 
+![Screenshot from 2021-02-16 09-37-46](https://user-images.githubusercontent.com/73107656/108045019-e0640f00-703a-11eb-98c5-7ca902df0a68.png)
+
+Here we can see that sportsCoupe has access to the **salePrice** method which is a prototype of the Car class, digging a level deeper we can see that sportsCoupe also has access to the prototype methods on the Vehicle class **forwards** and **stop**.  Digging deeper down again the global Object prototypes are also accessible to sportsCoupe as they are to all objects. This is an example of the prototype chain.
 
 ### Prototype Inheritance
 
