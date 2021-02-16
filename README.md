@@ -5,14 +5,14 @@
 
 #### ToC:
 [Constructors & Factory Functions](#Constructors-&-Factory-Functions)<br>
-[Prototype Inheritance](###Prototype-Inheritance)<br>
-[Classes](###Classes)<br>
-[The prototype chain](###The-prototype-chain)<br>
-[Mixins](###Mixins)<br>
-[Closures](###Closures)<br>
-[IIFE - Immediately Invoked Function Expression](###IIFE---Immediately-Invoked-Function-Expression)<br>
-[Namespace Pattern](###Namespace-Pattern) <br>
-[ES6 native module pattern](###ES6-native-module-pattern)
+[Prototype Inheritance](#Prototype-Inheritance)<br>
+[Classes](#Classes)<br>
+[The prototype chain](#The-prototype-chain)<br>
+[Mixins](#Mixins)<br>
+[Closures](#Closures)<br>
+[IIFE - Immediately Invoked Function Expression](#IIFE---Immediately-Invoked-Function-Expression)<br>
+[Namespace Pattern](#Namespace-Pattern) <br>
+[ES6 native module pattern](#ES6-native-module-pattern)
 
 ----------------------------------------------------------------------
 
