@@ -1,8 +1,5 @@
 # JavaScript OOP Reference Guide
 
-### A resource for junior devs in their transition to mid level
-#### My study covers both the traditional syntax and the newer ES6 patterns. This is a working document being crafted as I develop deeper levels of practical understanding.  Click the links below to go straight to the section of interest.  
-
 #### ToC:
 [Constructors and Factory Functions](#Constructors-and-Factory-Functions)<br>
 [Prototype Inheritance](#Prototype-Inheritance)<br>
@@ -23,7 +20,7 @@ Factory functions are the most explicit way of creating new objects, they are gr
 
 **Constructor functions** use the 'new' and 'this' keywords in their pattern, below is an example of the constructor function pattern using parameters which allow values to be dynamically added as each new instance is created.  They do not return a value, they return a new object:
 
-```
+```js
 function Car(make, model, price){
   this.make = make;
   this.model = model;
@@ -35,7 +32,7 @@ let sportsCoupe = new Car('Toyota', 'Supra', 60000);
 
 Adding prototypes to constructors can be done with the following pattern:
 
-```
+```js
 Car.prototype.salePrice = function (){
   return this.price * 0.90;
 };
@@ -50,7 +47,7 @@ The method `sportsCoupe.hasOwnProperty(price);` can be used to check if a proper
 
 We can also check an objects constructor, however unless a constructor has explicitly been assign itself as its constructor each new object would have the default constructor of the global Object.  Here is the pattern to use when assigning prototypes to the constructor to ensure each new object is assigned its immediate parent as its constructor:
 
-```
+```js
 Car.prototype = {
   constructor: Car, // This is the bit to remember
   salePrice: function (){ 
@@ -71,7 +68,7 @@ As a rule of thumb properties are saved to the constructor which in turn becomes
 
 Lets say there is a more general constructor called Vehicle and we have created a new constructor for a type of vehicle called Motorbike and we want Motorbike to inherit Vehicles prototypes. Here is the pattern:
 
-```
+```js
 Motorbike.prototype = Object.create(Vehicle.prototype);
 Motorbike.prototype.constructor = Motorbike;
 
@@ -85,7 +82,7 @@ Now Motorbike has inherited both the prototype properties of Vehicle and also th
 **Classes** abstract the act of adding prototypes and allow all the code relating to properties and behaviour to be encapsulated within the class scope. Adding prototypes to classes is quick and clean and also easier to reason about when approaching unfamiliar code. 
 The below example shows the class pattern structure in the form of a declaration.  Notice the constructor function within and below that the prototype methods:
 
-```
+```js
 class Vehicle {
   constructor(){
     this.type = type;
@@ -183,7 +180,7 @@ JavaScript modules despite still evolving have become far more sophisticated and
 
 Inline
 
-```
+```js
 // export from somefile.js
 export const myFunc = function (){};
 
@@ -194,7 +191,7 @@ import {myFunc} from './modules/somefile.js';
 
 Grouped (kind of looks like destructuring)
 
-```
+```js
 export { func1, func2, func3 };
 
 import { func1, func2, func3 } from './modules/somefile.js';
@@ -203,14 +200,14 @@ import { func1, func2, func3 } from './modules/somefile.js';
 
 Default export:
 
-```
+```js
 export default myFunc;
 
 ```
 
 Creating a module object so a files exports are properties of the object.  In this case the only global variable will be the object name.  This harks back to the traditional module namespace management and builds on it brilliantly.  Here is this pattern:
 
-```
+```js
 export { func1, func2, func3 };
 
 import * as objectName from './modules/somefile.js';
@@ -219,7 +216,7 @@ import * as objectName from './modules/somefile.js';
 
 In this situation the individual methods are accessed as normal:
 
-```
+```js
 objectName.func1();
 
 ```
